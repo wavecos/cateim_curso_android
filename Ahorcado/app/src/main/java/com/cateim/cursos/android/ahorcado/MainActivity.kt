@@ -33,6 +33,15 @@ class MainActivity : AppCompatActivity() {
         inicializarJuego()
     }
 
+    fun reiniciarJuego(view: View) {
+        // val myButtonReset = view as Button
+        ahorcadoImageView.setImageResource(R.drawable.ahorcado_5)
+        palabraSecreta = ""
+        palabraEscondida = ""
+        numIntentos = 1
+        inicializarJuego()
+    }
+
     fun inicializarJuego() {
         val indice = (0..(palabras.size - 1)).random()
         palabraSecreta = palabras[indice]

@@ -3,6 +3,7 @@ package com.cateim.cursos.android.conversormoneda
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -56,5 +57,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+
+    fun convertirMonedas(view: View) {
+        Log.d(TAG, "esta es otra forma de click")
     }
 }
