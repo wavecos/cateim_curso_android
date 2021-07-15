@@ -7,3 +7,16 @@ enum class Operacion {
     RESTAR,
     NO_OPERACION
 }
+
+enum class Genero {
+    MASCULINO,
+    FEMENINO
+}
+
+enum class Ciudades {
+    Cba,
+    Lpz,
+    Scz,
+    Oru,
+    Pot
+}
