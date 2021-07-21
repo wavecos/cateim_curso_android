@@ -7,7 +7,7 @@
     tools:context=".DetalleActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titularTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/titularTextView"
         app:srcCompat="@drawable/noticia" />
 
     <androidx.constraintlayout.widget.Guideline
