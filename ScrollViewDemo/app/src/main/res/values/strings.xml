@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ScrollViewDemo</string>
     <string name="titular">British Grand Prix: Lewis Hamilton quickest in Silverstone qualifying</string>
+    <string name="ver_mas">Ver Mas...</string>
 </resources>
