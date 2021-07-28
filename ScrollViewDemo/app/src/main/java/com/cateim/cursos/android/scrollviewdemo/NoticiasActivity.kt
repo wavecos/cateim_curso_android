@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cateim.cursos.android.scrollviewdemo.model.Noticia
@@ -25,6 +26,7 @@ class NoticiasActivity : AppCompatActivity() {
 
         val noticiaAdapter = NoticiaAdapter(this,noticiasDataset)
         val noticiaLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        // val noticiaLayoutManager = GridLayoutManager(this, 3,GridLayoutManager.VERTICAL, false)
 
         noticiasRecyclerView.adapter = noticiaAdapter
         noticiasRecyclerView.layoutManager = noticiaLayoutManager
