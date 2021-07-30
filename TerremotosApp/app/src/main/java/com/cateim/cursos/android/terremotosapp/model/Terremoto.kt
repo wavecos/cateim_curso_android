@@ -1,20 +1,17 @@
 package com.cateim.cursos.android.terremotosapp.model
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 class Terremoto(
-    @SerializedName("artistName")
-    var nombreArtista: String,
-    @SerializedName("collectionName")
-    var nombreAlbum: String,
-    @SerializedName("trackName")
-    var nombreCancion: String,
-    @SerializedName("artworkUrl100")
-    var imagenUrl: String,
-    @SerializedName("primaryGenreName")
-    var genero: String,
-    @SerializedName("previewUrl")
-    var cancionUrl: String
+    var magnitude: Float,
+    var place: String,
+    var date: Date,
+    var url: String,
+    var isTsunami: Boolean,
+    var type: String,
+    var latitude: Double,
+    var longitude: Double,
 ) {
 
 }
