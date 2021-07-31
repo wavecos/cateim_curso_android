@@ -1,6 +1,7 @@
 package com.cateim.cursos.android.terremotosapp.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cateim.cursos.android.terremotosapp.R
+import com.cateim.cursos.android.terremotosapp.WebActivity
 import com.cateim.cursos.android.terremotosapp.model.Terremoto
 import java.text.SimpleDateFormat
 
@@ -23,9 +25,9 @@ class TerremotoAdapter(val context: Context, val terremotosDataset: List<Terremo
         holder.textViewMagnitud.text = "${terremoto.magnitude}"
 
         //
-//        if (terremoto.magnitude > 1) {
-//            holder.textViewMagnitud.setTextColor(context.resources.getColor(R.color.terremotoRed, null))
-//        }
+        if (terremoto.magnitude > 1.5) {
+            holder.textViewMagnitud.setTextColor(context.resources.getColor(R.color.terremotoRed, null))
+        }
 
         holder.textViewLugar.text = terremoto.place
 
@@ -37,6 +39,13 @@ class TerremotoAdapter(val context: Context, val terremotosDataset: List<Terremo
         }
         holder.textViewFecha.text = dateStr
 
+        // click al webactivity
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, WebActivity::class.java)
+            intent.putExtra("TERREMOTO_URL", terremoto.url)
+
+            context.startActivity(intent)
+        }
 
     }
 

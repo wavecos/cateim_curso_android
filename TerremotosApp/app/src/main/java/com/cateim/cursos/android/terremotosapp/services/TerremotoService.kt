@@ -1,6 +1,9 @@
 package com.cateim.cursos.android.terremotosapp.services
 
 import com.cateim.cursos.android.terremotosapp.model.Resultado
+import com.cateim.cursos.android.terremotosapp.model.Terremoto
+import com.cateim.cursos.android.terremotosapp.model.TerremotoDeserializer
+import com.google.gson.GsonBuilder
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,9 +16,11 @@ class TerremotoService {
     // https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/
 
     init {
+        val gson = GsonBuilder().registerTypeAdapter(Terremoto::class.java, TerremotoDeserializer()).create()
+
         val retrofit = Retrofit.Builder()
             .baseUrl("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/")
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
         terremotoAPI = retrofit.create(TerremotoAPI::class.java)

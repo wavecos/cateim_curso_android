@@ -1,12 +1,14 @@
 package com.cateim.cursos.android.musicapp.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.cateim.cursos.android.musicapp.CancionActivity
 import com.cateim.cursos.android.musicapp.R
 import com.cateim.cursos.android.musicapp.model.Cancion
 import com.squareup.picasso.Picasso
@@ -26,6 +28,16 @@ class CancionAdapter(val context: Context, val cancionesDataset: List<Cancion>):
         Picasso.get()
             .load(cancion.imagenUrl)
             .into(holder.albumImageView)
+
+        holder.albumImageView.setOnClickListener {
+            val cancionIntent = Intent(context, CancionActivity::class.java)
+
+            cancionIntent.putExtra("IMAGE_URL", cancion.imagenUrl)
+            cancionIntent.putExtra("CANCION_NOMBRE", cancion.nombreCancion)
+            cancionIntent.putExtra("CANCION_URL", cancion.cancionUrl)
+
+            context.startActivity(cancionIntent)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -29,6 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -48,6 +51,7 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     // Room - SQLite
     implementation "androidx.room:room-runtime:2.3.0"
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
     annotationProcessor "androidx.room:room-compiler:2.3.0"
 
     testImplementation 'junit:junit:4.+'

@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B3:80:5E:11:9F:A3:1E:F5:5F:D1:BE:50:DD:2D:3B:39:EF:46:E0:59%3Bcom.cateim.cursos.android.terremotosapp
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.cateim.cursos.android.terremotosapp
+
+    SHA-1 certificate fingerprint:
+    B3:80:5E:11:9F:A3:1E:F5:5F:D1:BE:50:DD:2D:3B:39:EF:46:E0:59
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCMuEZL9voYPqrHiSeVpGv2iwcUp7DrrU8</string>
+</resources>
